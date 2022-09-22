@@ -1,0 +1,41 @@
+<div class="card">
+
+    <h1 class="text-center"> <strong>X_x ..FORMULARIO DE EMPLEADOS CRACKSDEVEL.. x_X</strong></h1>
+
+    
+    <div class="card-header text-center">
+        
+        <a class="btn btn-success" routerLink="/agregar-empleado/"> Agregar Nuevo Usuario  </a> 
+    </div>
+    <div class="card-body">
+        Lisar Empleados
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empleado of Empleados; let iControl=index">
+                    
+                    <td>{{empleado.id}}</td>
+                    <td>{{empleado.nombre}}</td>
+                    <td>{{empleado.correo}}</td>
+                    <td>
+                       <a class="btn btn-info" routerLink="/editar-empleado/{{empleado.id}}"> Editar  </a> |
+            
+
+                       <a class="btn btn-danger" (click)="borrarRegistro(empleado.id, iControl)" role="button"> Borrar</a>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+    </div>
+    <small id="helpId" class="form-text text-muted text-center">Developed by Miller Jaramillo</small>
+</div>
+

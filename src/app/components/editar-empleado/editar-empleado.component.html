@@ -1,0 +1,33 @@
+<div class="card">
+    <div class="card-header">
+       <strong>  Editar Empleado </strong>
+    </div>
+    <div class="card-body">
+        
+        <form [formGroup]="formularioDeEmpleados" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre</label>
+              <input type="text"
+              formControlName="nombre"
+                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escribe tu nombre">              
+            </div>
+
+            <div class="mb-3">
+              <label for="" class="form-label">Correo</label>
+              <input type="email"
+              formControlName="correo"
+                class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escribe tu correo">
+              
+            </div>
+
+            <div class="btn-group" role="group" aria-label="">
+
+            
+                <button type="submit" class="btn btn-outline-warning">Modificar Registro</button>
+                <button type="button" routerLink="/listar-empleado/" class="btn btn-outline-danger">Cancelar</button>
+            </div>
+        </form>
+    </div>
+  
+</div>
+<small id="helpId" class="form-text text-muted"> Developed by Miller Jaramillo :)</small>
